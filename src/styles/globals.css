@@ -77,4 +77,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .section-header input {
+    margin: 1em 0 2em;
+  }
+}
+
+@layer utilities {
+  .error-msg {
+    @apply italic text-red-500;
+  }
 }

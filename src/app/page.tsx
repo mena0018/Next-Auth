@@ -1,11 +1,14 @@
 import { FC } from 'react';
+import Link from 'next/link';
 
-const Home: FC = () => {
+const HomePage: FC = () => {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1>Hello</h1>
+    <main className='container relative flex min-h-screen flex-col items-center justify-center bg-slate-900'>
+      <Link href='/admin' className='text-3xl font-semibold text-white'>
+        Go to Admin mode
+      </Link>
     </main>
   );
 };
 
-export default Home;
+export default HomePage;
