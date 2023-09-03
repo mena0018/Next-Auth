@@ -3,12 +3,11 @@
 import { FC } from 'react';
 import { cn } from '@/lib/utils';
 import { Fields, zFields } from '@/models';
-import { Loader } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import SignButton from '@/components/sign-button';
 
 const AuthForm: FC = () => {
   const {
@@ -49,10 +48,7 @@ const AuthForm: FC = () => {
           )}
         </div>
 
-        <Button disabled={isSubmitting}>
-          {isSubmitting && <Loader className='mr-2 h-4 w-4 animate-spin' />}
-          Sign Up
-        </Button>
+        <SignButton />
       </form>
     </div>
   );
